@@ -3,4 +3,6 @@
 
 ![CI](https://github.com/kproger/frontend-project-lvl1/workflows/CI/badge.svg)
 
-[![asciicast](https://asciinema.org/a/Kbzx3caDfmOCTVkvjPksXUAXC.svg)](https://asciinema.org/a/Kbzx3caDfmOCTVkvjPksXUAXC)
+[![asciicast](https://asciinema.org/a/364668.svg)](https://asciinema.org/a/364668)
+
+[![asciicast](https://asciinema.org/a/364670.svg)](https://asciinema.org/a/364670)
