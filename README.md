@@ -3,12 +3,12 @@
 
 ![CI](https://github.com/kproger/frontend-project-lvl1/workflows/CI/badge.svg)
 
-[![asciicast](https://asciinema.org/a/364668.svg)](https://asciinema.org/a/364668)
+[![asciicast](https://asciinema.org/a/364846.svg)](https://asciinema.org/a/364846)
 
-[![asciicast](https://asciinema.org/a/364670.svg)](https://asciinema.org/a/364670)
+[![asciicast](https://asciinema.org/a/364847.svg)](https://asciinema.org/a/364847)
 
-[![asciicast](https://asciinema.org/a/364699.svg)](https://asciinema.org/a/364699)
+[![asciicast](https://asciinema.org/a/364848.svg)](https://asciinema.org/a/364848)
 
-[![asciicast](https://asciinema.org/a/364711.svg)](https://asciinema.org/a/364711)
+[![asciicast](https://asciinema.org/a/364850.svg)](https://asciinema.org/a/364850)
 
 [![asciicast](https://asciinema.org/a/364739.svg)](https://asciinema.org/a/364739)
