@@ -1,6 +1,6 @@
 # Welcome to The Brain Games!
 
-### Brain Games consists of five games. In each of them, the user is asked to answer a question. The game ends when the user gives three correct answers or when he gives the wrong one
+### The Brain Games consist of five games. In each of them, the user is asked to answer a question. The game ends when the user gives three correct answers or when he gives the wrong one
 [![Maintainability](https://api.codeclimate.com/v1/badges/6b98a2273a2067d553d9/maintainability)](https://codeclimate.com/github/kproger/frontend-project-lvl1/maintainability)
 
 
