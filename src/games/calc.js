@@ -1,5 +1,5 @@
 import gameArc from '../index.js';
-import getRandomNumber from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const gameConditions = 'What is the result of the expression?';
 

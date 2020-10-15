@@ -1,5 +1,5 @@
 import gameArc from '../index.js';
-import getRandomNumber from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const gameConditions = 'What number is missing in the progression?';
 

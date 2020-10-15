@@ -1,5 +1,5 @@
 import gameArc from '../index.js';
-import getRandomNumber from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const gameConditions = 'Find the greatest common divisor of given numbers.';
 
