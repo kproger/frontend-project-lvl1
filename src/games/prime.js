@@ -1,9 +1,11 @@
 import gameArc from '../index.js';
-import getRandomNumber from '../randomNumber.js';
+import getRandomNumber from '../utils.js';
 
 const gameConditions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function isPrime(num) {
+  if (num === 1) return false;
+
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
       return false;
@@ -12,11 +14,9 @@ function isPrime(num) {
   return true;
 }
 
-const getCorrectAnswer = (num) => (isPrime(num) ? 'yes' : 'no');
-
 function getQuesAndCorrAnsw() {
-  const question = getRandomNumber(25, 1);
-  const correctAnswer = getCorrectAnswer(question);
+  const question = getRandomNumber(1, 25);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
   return [question, correctAnswer];
 }

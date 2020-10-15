@@ -1,22 +1,27 @@
 import gameArc from '../index.js';
-import getRandomNumber from '../randomNumber.js';
+import getRandomNumber from '../utils.js';
 
 const gameConditions = 'What number is missing in the progression?';
-const getRandomStepOfProgression = () => getRandomNumber(10, 1);
 
-function getQustnAndCorAnswer() {
-  const progressionArr = [];
-  const step = getRandomStepOfProgression();
-  progressionArr.push(getRandomNumber(100, 1));
+function genProgression() {
+  const progression = [];
+  progression.push(getRandomNumber(1, 100));
+  const step = getRandomNumber(1, 10);
 
   for (let i = 0; i < 9; i += 1) {
-    const newNumb = progressionArr[i] + step;
-    progressionArr.push(newNumb);
+    const newNum = progression[i] + step;
+    progression.push(newNum);
   }
-  const deletedNumbIndex = getRandomStepOfProgression() - 1;
-  const correctAnswer = progressionArr[deletedNumbIndex].toString();
-  progressionArr[deletedNumbIndex] = '..';
-  const question = progressionArr.join(' ');
+  return progression;
+}
+
+function getQustnAndCorAnswer() {
+  const progression = genProgression();
+
+  const indexToDelete = getRandomNumber(1, 10) - 1;
+  const correctAnswer = progression[indexToDelete].toString();
+  progression[indexToDelete] = '..';
+  const question = progression.join(' ');
 
   return [question, correctAnswer];
 }

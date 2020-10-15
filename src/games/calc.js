@@ -1,36 +1,42 @@
 import gameArc from '../index.js';
-import getRandomNumber from '../randomNumber.js';
+import getRandomNumber from '../utils.js';
 
 const gameConditions = 'What is the result of the expression?';
 
 function getRandomSign() {
-  const signs = {
-    1: '+',
-    2: '-',
-    3: '*',
-  };
+  const signs = ['+', '-', '*'];
 
-  return signs[Math.ceil(Math.random() * 3)];
+  return signs[getRandomNumber(0, 2)];
 }
 
-function count(num1, num2, sign) {
-  if (sign === '*') {
-    return num1 * num2;
-  } if (sign === '-') {
-    return num1 - num2;
+function calculateExpression(num1, num2, sign) {
+  let result;
+
+  switch (sign) {
+    case '*':
+      result = num1 * num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '+':
+      result = num1 + num2;
+      break;
+    default:
+      throw new Error(`Unknown sign ${sign}!`);
   }
-  return num1 + num2;
+  return result;
 }
 
-function getQuesAndAnswer() {
-  const num1 = getRandomNumber(30, 1);
-  const num2 = getRandomNumber(30, 1);
+function genQuestionAndRightAnswer() {
+  const num1 = getRandomNumber(1, 30);
+  const num2 = getRandomNumber(1, 30);
   const sign = getRandomSign();
 
   const question = `${num1} ${sign} ${num2}`;
-  const correctAnswer = count(num1, num2, sign).toString();
+  const correctAnswer = calculateExpression(num1, num2, sign).toString();
 
   return [question, correctAnswer];
 }
 
-export default () => gameArc(gameConditions, getQuesAndAnswer);
+export default () => gameArc(gameConditions, genQuestionAndRightAnswer);

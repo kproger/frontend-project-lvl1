@@ -1,26 +1,17 @@
 import gameArc from '../index.js';
-import getRandomNumber from '../randomNumber.js';
+import getRandomNumber from '../utils.js';
 
 const gameConditions = 'Find the greatest common divisor of given numbers.';
 
-function generateQuestion() {
-  return `${getRandomNumber(100, 1)} ${getRandomNumber(100, 1)}`;
-}
+const getGcd = (a, b) => ((a % b) ? getGcd(b, a % b) : Math.abs(b));
 
-function getGcd([num1, num2]) {
-  for (let i = num1; i >= 1; i -= 1) {
-    if (num1 % i === 0 && num2 % i === 0) {
-      return i.toString();
-    }
-  }
-  return 1;
-}
-
-function getQuestAndCorrectAnswer() {
-  const question = generateQuestion();
-  const correctAnswer = getGcd(question.split(' '));
+function genQuestAndCorrectAnswer() {
+  const num1 = getRandomNumber(1, 100);
+  const num2 = getRandomNumber(1, 100);
+  const question = `${getRandomNumber(1, 100)} ${getRandomNumber(1, 100)}`;
+  const correctAnswer = getGcd(num1, num2).toString();
 
   return [question, correctAnswer];
 }
 
-export default () => gameArc(gameConditions, getQuestAndCorrectAnswer);
+export default () => gameArc(gameConditions, genQuestAndCorrectAnswer);
