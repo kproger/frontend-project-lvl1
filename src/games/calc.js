@@ -6,26 +6,20 @@ const gameConditions = 'What is the result of the expression?';
 function getRandomSign() {
   const signs = ['+', '-', '*'];
 
-  return signs[getRandomNumber(0, 2)];
+  return signs[getRandomNumber(0, signs.length - 1)];
 }
 
 function calculateExpression(num1, num2, sign) {
-  let result;
-
   switch (sign) {
     case '*':
-      result = num1 * num2;
-      break;
+      return num1 * num2;
     case '-':
-      result = num1 - num2;
-      break;
+      return num1 - num2;
     case '+':
-      result = num1 + num2;
-      break;
+      return num1 + num2;
     default:
       throw new Error(`Unknown sign ${sign}!`);
   }
-  return result;
 }
 
 function genQuestionAndRightAnswer() {

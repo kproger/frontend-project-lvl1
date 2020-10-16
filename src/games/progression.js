@@ -3,24 +3,25 @@ import { getRandomNumber } from '../utils.js';
 
 const gameConditions = 'What number is missing in the progression?';
 
-function genProgression() {
-  const progression = [];
-  progression.push(getRandomNumber(1, 100));
-  const step = getRandomNumber(1, 10);
+function genProgression(firstElem, indexToDelete, stepAmount) {
+  const progression = [firstElem];
 
   for (let i = 0; i < 9; i += 1) {
-    const newNum = progression[i] + step;
+    const newNum = progression[i] + stepAmount;
     progression.push(newNum);
   }
-  return progression;
+  const correctAnswer = progression[indexToDelete].toString();
+  progression[indexToDelete] = '..';
+
+  return [progression, correctAnswer];
 }
 
 function getQustnAndCorAnswer() {
-  const progression = genProgression();
+  const firstElem = getRandomNumber(1, 100);
+  const stepAmount = getRandomNumber(1, 10);
+  const indexToDelete = getRandomNumber(0, 9);
+  const [progression, correctAnswer] = genProgression(firstElem, indexToDelete, stepAmount);
 
-  const indexToDelete = getRandomNumber(1, 10) - 1;
-  const correctAnswer = progression[indexToDelete].toString();
-  progression[indexToDelete] = '..';
   const question = progression.join(' ');
 
   return [question, correctAnswer];

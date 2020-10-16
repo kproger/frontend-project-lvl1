@@ -8,7 +8,7 @@ const getGcd = (a, b) => ((a % b) ? getGcd(b, a % b) : Math.abs(b));
 function genQuestAndCorrectAnswer() {
   const num1 = getRandomNumber(1, 100);
   const num2 = getRandomNumber(1, 100);
-  const question = `${getRandomNumber(1, 100)} ${getRandomNumber(1, 100)}`;
+  const question = `${num1} ${num2}`;
   const correctAnswer = getGcd(num1, num2).toString();
 
   return [question, correctAnswer];
