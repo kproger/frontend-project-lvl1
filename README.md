@@ -6,17 +6,22 @@
 
 [![Node CI](https://github.com/kproger/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/kproger/frontend-project-lvl1/actions)
 
-## Answer "yes" if the number is even, otherwise answer "no"
+## Brain-even 
+### Answer "yes" if the number is even, otherwise answer "no"
 [![asciicast](https://asciinema.org/a/364846.svg)](https://asciinema.org/a/364846)
 
-## What is the result of the expression?
+## Brain-calculation
+### What is the result of the expression?
 [![asciicast](https://asciinema.org/a/364847.svg)](https://asciinema.org/a/364847)
 
-## Find the greatest common divisor of the given numbers
+## Brain-greatest common divisor
+### Find the greatest common divisor of the given numbers
 [![asciicast](https://asciinema.org/a/364848.svg)](https://asciinema.org/a/364848)
 
-## What number is missing in the progression
+## Brain-progression
+### What number is missing in the progression
 [![asciicast](https://asciinema.org/a/364850.svg)](https://asciinema.org/a/364850)
 
-## Answer "yes" if given number is prime. Otherwise answer "no"
+## Brain-prime
+### Answer "yes" if given number is prime. Otherwise answer "no"
 [![asciicast](https://asciinema.org/a/364739.svg)](https://asciinema.org/a/364739)
