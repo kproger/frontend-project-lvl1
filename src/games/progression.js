@@ -3,7 +3,7 @@ import { getRandomNumber } from '../utils.js';
 
 const gameConditions = 'What number is missing in the progression?';
 
-function genProgression(firstElem, indexToDelete, step) {
+const genProgression = (firstElem, indexToDelete, step) => {
   const result = [];
 
   for (let i = 0; i < 10; i += 1) {
@@ -15,7 +15,7 @@ function genProgression(firstElem, indexToDelete, step) {
   return result.join(' ');
 }
 
-function getQustnAndCorAnswer() {
+const getQustnAndCorAnswer = () => {
   const firstElem = getRandomNumber(1, 100);
   const stepAmount = getRandomNumber(1, 10);
   const indexToDelete = getRandomNumber(0, 9);
