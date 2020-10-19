@@ -16,7 +16,7 @@ const genProgression = (firstElem, indexToHide, step, progresLen) => {
   return result.join(' ');
 };
 
-const getQustnAndCorAnswer = () => {
+const generateRound = () => {
   const firstElem = getRandomNumber(1, 100);
   const stepAmount = getRandomNumber(1, 10);
   const hiddenElemIndex = getRandomNumber(0, 9);
@@ -26,4 +26,4 @@ const getQustnAndCorAnswer = () => {
   return [question, correctAnswer];
 };
 
-export default () => gameArc(gameConditions, getQustnAndCorAnswer);
+export default () => gameArc(gameConditions, generateRound);

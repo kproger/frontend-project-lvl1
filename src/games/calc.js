@@ -22,7 +22,7 @@ const calculateExpression = (num1, num2, sign) => {
   }
 };
 
-const genQuestionAndRightAnswer = () => {
+const generateRound = () => {
   const num1 = getRandomNumber(1, 30);
   const num2 = getRandomNumber(1, 30);
   const sign = getRandomSign();
@@ -33,4 +33,4 @@ const genQuestionAndRightAnswer = () => {
   return [question, correctAnswer];
 };
 
-export default () => gameArc(gameConditions, genQuestionAndRightAnswer);
+export default () => gameArc(gameConditions, generateRound);

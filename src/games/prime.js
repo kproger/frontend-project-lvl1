@@ -14,11 +14,11 @@ const isPrime = (num) => {
   return true;
 };
 
-const getQuesAndCorrAnsw = () => {
+const generateRound = () => {
   const question = getRandomNumber(1, 25);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
   return [question.toString(), correctAnswer];
 };
 
-export default () => gameArc(gameConditions, getQuesAndCorrAnsw);
+export default () => gameArc(gameConditions, generateRound);

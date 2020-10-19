@@ -5,7 +5,7 @@ const gameConditions = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (a, b) => ((a % b) ? getGcd(b, a % b) : Math.abs(b));
 
-const genQuestAndCorrectAnswer = () => {
+const generateRound = () => {
   const num1 = getRandomNumber(1, 100);
   const num2 = getRandomNumber(1, 100);
   const question = `${num1} ${num2}`;
@@ -14,4 +14,4 @@ const genQuestAndCorrectAnswer = () => {
   return [question, correctAnswer];
 };
 
-export default () => gameArc(gameConditions, genQuestAndCorrectAnswer);
+export default () => gameArc(gameConditions, generateRound);
