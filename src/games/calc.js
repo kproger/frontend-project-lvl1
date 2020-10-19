@@ -7,9 +7,9 @@ const getRandomSign = () => {
   const signs = ['+', '-', '*'];
 
   return signs[getRandomNumber(0, signs.length - 1)];
-}
+};
 
-const calculateExpression =(num1, num2, sign) => {
+const calculateExpression = (num1, num2, sign) => {
   switch (sign) {
     case '*':
       return num1 * num2;
@@ -20,7 +20,7 @@ const calculateExpression =(num1, num2, sign) => {
     default:
       throw new Error(`Unknown sign ${sign}!`);
   }
-}
+};
 
 const genQuestionAndRightAnswer = () => {
   const num1 = getRandomNumber(1, 30);
@@ -31,6 +31,6 @@ const genQuestionAndRightAnswer = () => {
   const correctAnswer = calculateExpression(num1, num2, sign).toString();
 
   return [question, correctAnswer];
-}
+};
 
 export default () => gameArc(gameConditions, genQuestionAndRightAnswer);

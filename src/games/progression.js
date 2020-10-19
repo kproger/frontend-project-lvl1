@@ -14,7 +14,7 @@ const genProgression = (firstElem, indexToHide, step, progresLen) => {
   }
 
   return result;
-}
+};
 
 const getQustnAndCorAnswer = () => {
   const firstElem = getRandomNumber(1, 100);
@@ -24,6 +24,6 @@ const getQustnAndCorAnswer = () => {
   const correctAnswer = (firstElem + stepAmount * hiddenElemIndex).toString();
 
   return [question, correctAnswer];
-}
+};
 
 export default () => gameArc(gameConditions, getQustnAndCorAnswer);

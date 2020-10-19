@@ -12,6 +12,6 @@ const genQuestAndCorrectAnswer = () => {
   const correctAnswer = getGcd(num1, num2).toString();
 
   return [question, correctAnswer];
-}
+};
 
 export default () => gameArc(gameConditions, genQuestAndCorrectAnswer);
