@@ -5,7 +5,7 @@ const gameConditions = 'Answer "yes" if the number is even, otherwise answer "no
 
 const isEven = (num) => num % 2 === 0;
 
-function getQuesAndAnswer() {
+const getQuesAndAnswer = () => {
   const question = getRandomNumber(1, 100);
   const correctAnswer = isEven(question) ? 'yes' : 'no';
 

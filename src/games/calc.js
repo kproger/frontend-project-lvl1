@@ -3,13 +3,13 @@ import { getRandomNumber } from '../utils.js';
 
 const gameConditions = 'What is the result of the expression?';
 
-function getRandomSign() {
+const getRandomSign = () => {
   const signs = ['+', '-', '*'];
 
   return signs[getRandomNumber(0, signs.length - 1)];
 }
 
-function calculateExpression(num1, num2, sign) {
+const calculateExpression =(num1, num2, sign) => {
   switch (sign) {
     case '*':
       return num1 * num2;
@@ -22,7 +22,7 @@ function calculateExpression(num1, num2, sign) {
   }
 }
 
-function genQuestionAndRightAnswer() {
+const genQuestionAndRightAnswer = () => {
   const num1 = getRandomNumber(1, 30);
   const num2 = getRandomNumber(1, 30);
   const sign = getRandomSign();
