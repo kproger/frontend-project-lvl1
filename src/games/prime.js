@@ -3,7 +3,7 @@ import { getRandomNumber } from '../utils.js';
 
 const gameConditions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function isPrime(num) {
+const isPrime = (num) => {
   if (num < 2) return false;
 
   for (let i = 2; i < num; i += 1) {
@@ -12,13 +12,13 @@ function isPrime(num) {
     }
   }
   return true;
-}
+};
 
-function getQuesAndCorrAnsw() {
+const getQuesAndCorrAnsw = () => {
   const question = getRandomNumber(1, 25);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
   return [question.toString(), correctAnswer];
-}
+};
 
 export default () => gameArc(gameConditions, getQuesAndCorrAnsw);

@@ -13,14 +13,14 @@ const genProgression = (firstElem, indexToHide, step, progresLen) => {
     result.push(elem);
   }
 
-  return result;
+  return result.join(' ');
 };
 
 const getQustnAndCorAnswer = () => {
   const firstElem = getRandomNumber(1, 100);
   const stepAmount = getRandomNumber(1, 10);
   const hiddenElemIndex = getRandomNumber(0, 9);
-  const question = genProgression(firstElem, hiddenElemIndex, stepAmount, progressionLength).join(' ');
+  const question = genProgression(firstElem, hiddenElemIndex, stepAmount, progressionLength);
   const correctAnswer = (firstElem + stepAmount * hiddenElemIndex).toString();
 
   return [question, correctAnswer];
